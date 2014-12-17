@@ -17,8 +17,6 @@
         Johnson Chen
     </author>
 
-</widget>
-
 <gap:platform name="ios" />
 <gap:platform name="android" />
 <gap:platform name="winphone" />
@@ -38,3 +36,4 @@
 <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
 <preference name="splash-screen-duration" value="10000"/>
 
+</widget>
