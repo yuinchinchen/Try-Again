@@ -22,7 +22,6 @@
 <gap:platform name="winphone" />
 
 <preference name="phonegap-version" value="3.5.0" />
-<preference name="orientation" value="landscape" />
 <preference name="fullscreen" value="true" />
 <preference name="target-device" value="universal" />
 <preference name="prerendered-icon" value="true" />
