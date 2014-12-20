@@ -45,3 +45,12 @@ span {
 	font-size: 40px;
 	text-align: center;
 }
+#plugin {display: block;
+width: 15%;
+margin: 0px auto;
+border: double;
+background-color: navajowhite;
+}
+#plugin p {text-align: center;
+font-size: 30px;
+color: red;}

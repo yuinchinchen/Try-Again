@@ -6,8 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="icomoon/style.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="phonegap.js"></script>
-	<script type="text/javascript"></script>
+	
 </head>
 <body>
 	<div class="pageContainer secondPage">
@@ -17,5 +16,52 @@
 		<br><br><br>
 		<h2>願神祝福你</h2>
 	</div>
+	<div id="plugin">
+		<p>UpDate"</p>
+	</div>
+
+<script type="text/javascript">
+
+var pushNotification;
+document.addEventListener("deviceready", function(){
+    $('#plugin') = window.plugins.pushNotification;
+
+    $("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
+if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
+    pushNotification.register(
+    successHandler,
+    errorHandler,
+    {
+        "senderID":"replace_with_sender_id",
+        "ecb":"onNotification"
+    });
+} else if ( device.platform == 'blackberry10'){
+    pushNotification.register(
+    successHandler,
+    errorHandler,
+    {
+        invokeTargetId : "replace_with_invoke_target_id",
+        appId: "replace_with_app_id",
+        ppgUrl:"replace_with_ppg_url", //remove for BES pushes
+        ecb: "pushNotificationHandler",
+        simChangeCallback: replace_with_simChange_callback,
+        pushTransportReadyCallback: replace_with_pushTransportReady_callback,
+        launchApplicationOnPush: true
+    });
+} else {
+    pushNotification.register(
+    tokenHandler,
+    errorHandler,
+    {
+        "badge":"true",
+        "sound":"true",
+        "alert":"true",
+        "ecb":"onNotificationAPN"
+    });
+}
+    
+});
+
+</script>
 </body>
 </html>
