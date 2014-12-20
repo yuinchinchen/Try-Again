@@ -35,4 +35,7 @@
 <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
 <preference name="splash-screen-duration" value="10000"/>
 
+<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
+<gap:plugin name="com.phonegap.plugins.barcodescanner" />
+
 </widget>
