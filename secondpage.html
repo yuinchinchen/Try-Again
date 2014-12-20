@@ -16,7 +16,7 @@
 		<br><br><br>
 		<h2>願神祝福你</h2>
 	</div>
-	<div id="plugin">
+	<div class="plugin">
 		<p>UpDate</p>
 	</div>
 
@@ -24,7 +24,8 @@
 
 var pushNotification;
 document.addEventListener("deviceready", function(){
-    $('#plugin p') = window.plugins.pushNotification;
+	$('.plugin p').click(function(){
+    pushNotification = window.plugins.pushNotification;
 
     $("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
 if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
@@ -59,7 +60,7 @@ if ( device.platform == 'android' || device.platform == 'Android' || device.plat
         "ecb":"onNotificationAPN"
     });
 }
-    
+});   
 });
 
 </script>
