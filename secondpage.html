@@ -17,14 +17,14 @@
 		<h2>願神祝福你</h2>
 	</div>
 	<div id="plugin">
-		<p>UpDate"</p>
+		<p>UpDate</p>
 	</div>
 
 <script type="text/javascript">
 
 var pushNotification;
 document.addEventListener("deviceready", function(){
-    $('#plugin') = window.plugins.pushNotification;
+    $('#plugin p') = window.plugins.pushNotification;
 
     $("#app-status-ul").append('<li>registering ' + device.platform + '</li>');
 if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
